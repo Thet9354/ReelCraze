@@ -33,7 +33,11 @@ struct DiscoverView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(viewModel.trending) { trendingItem in
-                                    TrendingCardView(trendingItem: trendingItem)
+                                    NavigationLink {
+                                        MovieDetailView(movie: trendingItem)
+                                    } label: {
+                                        TrendingCardView(trendingItem: trendingItem)
+                                    }
                                 }
                             }
                             .padding(.horizontal)
@@ -80,7 +84,6 @@ struct DiscoverView: View {
             }
             .background(Color(red:39/255, green: 40/255, blue: 59/255)
                 .ignoresSafeArea())
-            
         }
         .searchable(text: $searchText)
         .onChange(of: searchText, perform: { newValue in

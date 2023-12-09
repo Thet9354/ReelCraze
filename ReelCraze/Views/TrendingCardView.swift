@@ -10,7 +10,7 @@ import SwiftUI
 struct TrendingCardView: View {
     
     // MARK: - PROPERTIES
-    let trendingItem: TrendingItem
+    let trendingItem: Movie
     
     // MARK: - BODY
     var body: some View {
@@ -52,11 +52,12 @@ struct TrendingCardView: View {
 
 struct TrendingCardView_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleTrendingItem = TrendingItem(
+        let sampleTrendingItem = Movie(
             adult: false,
             id: 123,
             poster_path: "sample_poster_path",
             title: "Sample Movie",
+            overview: "Some dope shit",
             vote_average: 7.5,
             backdrop_path: "https://image.tmdb.org/t/p/w500"
         )
