@@ -19,17 +19,17 @@ struct Movie: Identifiable, Decodable {
 
     
     var backdropURL: URL? {
-        let baseURL = URL(string: "https://image.tmdb.org/t/p/w300")
+        let baseURL = URL(string: "https://image.tmdb.org/t/p/w400")
         return baseURL?.appending(path: backdrop_path ?? "")
     }
     
     var posterThumbnail: URL? {
-        let baseURL = URL(string: "https://image.tmdb.org/t/p/100")
+        let baseURL = URL(string: "https://image.tmdb.org/t/p/w100")
         return baseURL?.appending(path: poster_path ?? "")
     }
     
     var poster: URL? {
-        let baseURL = URL(string: "https://image.tmdb.org/t/p/300")
+        let baseURL = URL(string: "https://image.tmdb.org/t/p/w400")
         return baseURL?.appending(path: poster_path ?? "")
     }
     

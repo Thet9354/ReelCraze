@@ -10,7 +10,7 @@ import SwiftUI
 struct DiscoverView: View {
     
     // MARK: - PROPERTIES
-    @StateObject var viewModel = MovieDBViewModel()
+    @StateObject var viewModel = MovieDiscoverViewModel()
     
     @State var searchText = ""
     
